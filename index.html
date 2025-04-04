@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Montserrat:wght@300&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+
+        .slider {
+            display: flex;
+            width: 400vw;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 3em; }
+        p, a { font-size: 1.3em; text-decoration: none; color: #B85C38; }
+
+        .portfolio { background: #F7E1D7; }
+        .about { background: #ECD8C6; }
+        .projects { background: #E3C5AB; }
+        .personal { background: #D8B6A4; }
+
+        .nav {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav label {
+            padding: 10px 15px;
+            background: #B85C38;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .nav label:hover { background: #8C3A24; }
+
+        input { display: none; }
+        #slide1:checked ~ .slider { transform: translateX(0); }
+        #slide2:checked ~ .slider { transform: translateX(-100vw); }
+        #slide3:checked ~ .slider { transform: translateX(-200vw); }
+        #slide4:checked ~ .slider { transform: translateX(-300vw); }
+    </style>
+</head>
+<body>
+
+    <input type="radio" name="slide" id="slide1" checked>
+    <input type="radio" name="slide" id="slide2">
+    <input type="radio" name="slide" id="slide3">
+    <input type="radio" name="slide" id="slide4">
+
+    <div class="slider">
+        <div class="section portfolio">
+            <h1>My Portfolio</h1>
+            <p>Welcome to my creative space.</p>
+        </div>
+        <div class="section about"><h1>About Me</h1><p>Hey, I’m JOSHINI!
+
+            I’m currently in my second year of BCA. 
+            
+            Most of my time goes into learning new programming languages, working on small projects, and sometimes just getting stuck on a bug for hours (and then realizing it was a missing semicolon 😅). I’m always up for a challenge and love exploring things like web development.
+            
+            Apart from coding, you’ll probably find me binge-watching series, playing games, or just hanging out with friends. I’m excited to see where this journey takes me, and I’d love to connect with like-minded people!</p></div>
+        <div class="section projects">
+            <h1>Projects</h1>
+            <p><a href="# https://your-portfolio-link.com" target="_blank">View Portfolio</a></p>
+        </div>
+        <div class="section personal"><h1>Personal Details</h1>
+            <P>Name: Joshini</P><p>Degree: BCA</p><p>Email: joshinichandru3.gmailcom</p>
+            <p>Phone number:9150514550</p>
+        </div>
+    </div>
+
+    <div class="nav">
+        <label for="slide1">Portfolio</label>
+        <label for="slide2">About</label>
+        <label for="slide3">Projects</label>
+        <label for="slide4">Personal</label>
+    </div>
+
+</body>
+</html>
